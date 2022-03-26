@@ -1,0 +1,14 @@
+# ninja log v5
+6	48	0	C:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/build-Qt_blog-Desktop_Qt_6_2_3_MinGW_64_bit-Debug/CMakeFiles/cmake.verify_globs	a9e6212be0f216af
+10	850	6700123944097707	Qt_blog_autogen/mocs_compilation.cpp	6fb101e215d4fdbe
+10	850	6700123944097707	Qt_blog_autogen/timestamp	6fb101e215d4fdbe
+10	850	6700123944097707	C:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/build-Qt_blog-Desktop_Qt_6_2_3_MinGW_64_bit-Debug/Qt_blog_autogen/timestamp	6fb101e215d4fdbe
+887	3956	6700123976774199	CMakeFiles/Qt_blog.dir/Qt_blog_autogen/mocs_compilation.cpp.obj	f696ad5cd301acbe
+10	850	6700123944097707	C:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/build-Qt_blog-Desktop_Qt_6_2_3_MinGW_64_bit-Debug/Qt_blog_autogen/mocs_compilation.cpp	6fb101e215d4fdbe
+891	3654	6700123973758518	CMakeFiles/Qt_blog.dir/createaccountwindow.cpp.obj	8e1b9aaffbce02ad
+850	885	6700123946081704	C:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/Qt_blog/Qt_blog_en_GB.ts	650ad6a720c194d
+885	3997	6700123977156114	CMakeFiles/Qt_blog.dir/main.cpp.obj	98f7bb5e25d960cf
+893	4232	6700123979541882	CMakeFiles/Qt_blog.dir/loginwindow.cpp.obj	982c7df3a4f04db9
+4232	4506	6700123982235153	Qt_blog.exe	b03b3e9c15fc42d
+889	3500	6700123972211000	CMakeFiles/Qt_blog.dir/blogwindow.cpp.obj	a82923b153fdfd19
+3	37	0	C:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/build-Qt_blog-Desktop_Qt_6_2_3_MinGW_64_bit-Debug/CMakeFiles/cmake.verify_globs	a9e6212be0f216af
