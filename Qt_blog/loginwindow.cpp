@@ -20,60 +20,73 @@ void LoginWindow::on_loginPushButton_clicked()
     QString username = ui->usernameLineEdit->text();
 
     jsonReader(username, password, canLogin);
+
+    if(canLogin == true){
+        this->close();
+        BlogWindow *blogWindow = new BlogWindow;
+        blogWindow->show();
+    }
 }
 
 
 void LoginWindow::on_createPushButton_clicked()
 {
-
+    this->setDisabled(true);
+    CreateAccountWindow *createAccount = new CreateAccountWindow;
+    createAccount->show();
 }
 
 void LoginWindow::jsonReader(QString username_p, QString password_p, bool& login){
 
         //Open the Json file
         QString path = QCoreApplication::applicationDirPath() + "/json/users.json";
-        qDebug() << path;
         QFile user_file(path);
-        if(user_file.open(QIODevice::ReadOnly)){
+
+        //Debug
+        /*if(user_file.open(QIODevice::ReadOnly)){
                 qDebug() << "Json file opened";
-            }
+            }*/
 
         //Convert the QString text to Bytearray first
         QByteArray jsonData ;
         jsonData = user_file.readAll();
         user_file.close();
-        if(jsonData.isEmpty() == false) qDebug() << "JSon file not empty";
+
+        //Debug
+        //if(jsonData.isEmpty() == false) qDebug() << "JSon file not empty";
 
         //Assign the json text to a JSON object
         QJsonDocument jsonDocument = QJsonDocument::fromJson(jsonData);
-        if(jsonDocument.isObject() == true) qDebug() << "It a JSON object";
+
+        //Debug
+        //if(jsonDocument.isObject() == true) qDebug() << "It a JSON object";
 
         //Then get the main JSON object and get the datas in it
         QJsonObject object = jsonDocument.object();
 
         QJsonValue username = object.value(username_p);
-        qDebug() << username;
+
+        //Debug
+        //qDebug() << username;
 
         if(username == QJsonValue::Undefined){
-            qDebug() << "Cet utilisateur n'existe pas";
+            //Debug
+            //qDebug() << "This user does not exist";
             login = false;
 
         }else{
-            qDebug() << "Cet utilisateur existe";
+            //Debug
+            //qDebug() << "This user exist";
 
             QJsonObject identifiers = object.value(username_p).toObject();
             QJsonValue password = identifiers.value("password");
-            qDebug() << password;
 
             if(password == password_p){
                 login = true;
             }else{
                 login = false;
-                qDebug() << "Wrong password";
-
-                QLabel *child = new QLabel(this);
-                child->setText("Wrong password !");
-                child->show();
+                QMessageBox errorMsg;
+                errorMsg.critical(0,"Error","Wrong password !");
             }
         }
 

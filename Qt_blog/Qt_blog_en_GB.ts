@@ -4,7 +4,7 @@
 <context>
     <name>BlogWindow</name>
     <message>
-        <location filename="blogwindow.ui" line="16"/>
+        <location filename="blogwindow.ui" line="14"/>
         <source>MainWindow</source>
         <translation type="unfinished"></translation>
     </message>

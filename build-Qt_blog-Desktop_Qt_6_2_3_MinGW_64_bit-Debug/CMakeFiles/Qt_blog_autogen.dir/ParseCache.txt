@@ -137,7 +137,10 @@ C:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/Qt_blog/loginwindow.h
  mdp:C:/Qt/6.2.3/mingw_64/include/QtGui/qwindowdefs.h
  mdp:C:/Qt/6.2.3/mingw_64/include/QtGui/qwindowdefs_win.h
  mdp:C:/Qt/6.2.3/mingw_64/include/QtWidgets/QMainWindow
+ mdp:C:/Qt/6.2.3/mingw_64/include/QtWidgets/QMessageBox
+ mdp:C:/Qt/6.2.3/mingw_64/include/QtWidgets/qdialog.h
  mdp:C:/Qt/6.2.3/mingw_64/include/QtWidgets/qmainwindow.h
+ mdp:C:/Qt/6.2.3/mingw_64/include/QtWidgets/qmessagebox.h
  mdp:C:/Qt/6.2.3/mingw_64/include/QtWidgets/qsizepolicy.h
  mdp:C:/Qt/6.2.3/mingw_64/include/QtWidgets/qtabwidget.h
  mdp:C:/Qt/6.2.3/mingw_64/include/QtWidgets/qtwidgets-config.h
@@ -374,6 +377,8 @@ C:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/Qt_blog/loginwindow.h
  mdp:C:/Qt/Tools/mingw900_64/x86_64-w64-mingw32/include/vadefs.h
  mdp:C:/Qt/Tools/mingw900_64/x86_64-w64-mingw32/include/wchar.h
  mdp:C:/Qt/Tools/mingw900_64/x86_64-w64-mingw32/include/wctype.h
+ mdp:C:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/Qt_blog/blogwindow.h
+ mdp:C:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/Qt_blog/createaccountwindow.h
 C:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/Qt_blog/loginwindow.cpp
  uic:./ui_loginwindow.h
 C:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/Qt_blog/createaccountwindow.cpp

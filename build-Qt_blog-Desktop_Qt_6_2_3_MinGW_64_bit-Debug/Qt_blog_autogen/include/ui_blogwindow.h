@@ -12,8 +12,6 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QMainWindow>
-#include <QtWidgets/QMenuBar>
-#include <QtWidgets/QStatusBar>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -21,24 +19,16 @@ QT_BEGIN_NAMESPACE
 class Ui_BlogWindow
 {
 public:
-    QMenuBar *menubar;
     QWidget *centralwidget;
-    QStatusBar *statusbar;
 
     void setupUi(QMainWindow *BlogWindow)
     {
         if (BlogWindow->objectName().isEmpty())
             BlogWindow->setObjectName(QString::fromUtf8("BlogWindow"));
         BlogWindow->resize(800, 600);
-        menubar = new QMenuBar(BlogWindow);
-        menubar->setObjectName(QString::fromUtf8("menubar"));
-        BlogWindow->setMenuBar(menubar);
         centralwidget = new QWidget(BlogWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         BlogWindow->setCentralWidget(centralwidget);
-        statusbar = new QStatusBar(BlogWindow);
-        statusbar->setObjectName(QString::fromUtf8("statusbar"));
-        BlogWindow->setStatusBar(statusbar);
 
         retranslateUi(BlogWindow);
 

@@ -1,6 +1,9 @@
 #ifndef LOGINWINDOW_H
 #define LOGINWINDOW_H
 
+#include "blogwindow.h"
+#include "createaccountwindow.h"
+
 #include <QMainWindow>
 
 #include <QJsonDocument>
@@ -16,6 +19,7 @@
 #include <QByteArray>
 #include <QTextStream>
 #include <QDebug>
+#include <QMessageBox>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class LoginWindow; }
