@@ -42,8 +42,8 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="createaccountwindow.ui" line="98"/>
-        <source>PushButton</source>
+        <location filename="createaccountwindow.ui" line="106"/>
+        <source>Create my account</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

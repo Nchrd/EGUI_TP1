@@ -81,10 +81,18 @@
            <widget class="QLineEdit" name="lineEdit_2"/>
           </item>
           <item>
-           <widget class="QLineEdit" name="lineEdit_3"/>
+           <widget class="QLineEdit" name="lineEdit_3">
+            <property name="echoMode">
+             <enum>QLineEdit::Password</enum>
+            </property>
+           </widget>
           </item>
           <item>
-           <widget class="QLineEdit" name="lineEdit_4"/>
+           <widget class="QLineEdit" name="lineEdit_4">
+            <property name="echoMode">
+             <enum>QLineEdit::Password</enum>
+            </property>
+           </widget>
           </item>
          </layout>
         </item>
@@ -93,9 +101,9 @@
      </layout>
     </item>
     <item>
-     <widget class="QPushButton" name="pushButton">
+     <widget class="QPushButton" name="createAccountPushButton">
       <property name="text">
-       <string>PushButton</string>
+       <string>Create my account</string>
       </property>
      </widget>
     </item>

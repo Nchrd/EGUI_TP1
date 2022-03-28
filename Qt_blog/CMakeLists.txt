@@ -27,6 +27,8 @@ set(PROJECT_SOURCES
         createaccountwindow.cpp
         createaccountwindow.h
         createaccountwindow.ui
+        json.cpp
+        json.h
         ${TS_FILES}
 )
 

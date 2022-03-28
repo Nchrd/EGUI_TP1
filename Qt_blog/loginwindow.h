@@ -3,6 +3,7 @@
 
 #include "blogwindow.h"
 #include "createaccountwindow.h"
+#include "json.h"
 
 #include <QMainWindow>
 
@@ -32,8 +33,6 @@ class LoginWindow : public QMainWindow
 public:
     LoginWindow(QWidget *parent = nullptr);
     ~LoginWindow();
-    void jsonWriter(QString username_p, QString password_p);
-    void jsonReader(QString username_p, QString password_p, bool& login);
 
 private slots:
     void on_loginPushButton_clicked();

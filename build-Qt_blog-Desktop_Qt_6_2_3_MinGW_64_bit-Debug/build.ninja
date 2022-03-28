@@ -89,6 +89,14 @@ build CMakeFiles/Qt_blog.dir/createaccountwindow.cpp.obj: CXX_COMPILER__Qt_blog_
   OBJECT_DIR = CMakeFiles\Qt_blog.dir
   OBJECT_FILE_DIR = CMakeFiles\Qt_blog.dir
 
+build CMakeFiles/Qt_blog.dir/json.cpp.obj: CXX_COMPILER__Qt_blog_Debug C$:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/Qt_blog/json.cpp || cmake_object_order_depends_target_Qt_blog
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\Qt_blog.dir\json.cpp.obj.d
+  FLAGS = -g -std=gnu++17
+  INCLUDES = -IC:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/build-Qt_blog-Desktop_Qt_6_2_3_MinGW_64_bit-Debug -IC:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/Qt_blog -IC:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/build-Qt_blog-Desktop_Qt_6_2_3_MinGW_64_bit-Debug/Qt_blog_autogen/include -isystem C:/Qt/6.2.3/mingw_64/include/QtCore -isystem C:/Qt/6.2.3/mingw_64/include -isystem C:/Qt/6.2.3/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.2.3/mingw_64/include/QtWidgets -isystem C:/Qt/6.2.3/mingw_64/include/QtGui
+  OBJECT_DIR = CMakeFiles\Qt_blog.dir
+  OBJECT_FILE_DIR = CMakeFiles\Qt_blog.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Qt_blog
@@ -97,7 +105,7 @@ build CMakeFiles/Qt_blog.dir/createaccountwindow.cpp.obj: CXX_COMPILER__Qt_blog_
 #############################################
 # Link the executable Qt_blog.exe
 
-build Qt_blog.exe: CXX_EXECUTABLE_LINKER__Qt_blog_Debug CMakeFiles/Qt_blog.dir/Qt_blog_autogen/mocs_compilation.cpp.obj CMakeFiles/Qt_blog.dir/main.cpp.obj CMakeFiles/Qt_blog.dir/loginwindow.cpp.obj CMakeFiles/Qt_blog.dir/blogwindow.cpp.obj CMakeFiles/Qt_blog.dir/createaccountwindow.cpp.obj | C$:/Qt/6.2.3/mingw_64/lib/libQt6Widgets.a C$:/Qt/6.2.3/mingw_64/lib/libQt6Gui.a C$:/Qt/6.2.3/mingw_64/lib/libQt6Core.a C$:/Qt/6.2.3/mingw_64/lib/libQt6EntryPoint.a || Qt_blog_autogen Qt_blog_autogen_timestamp_deps
+build Qt_blog.exe: CXX_EXECUTABLE_LINKER__Qt_blog_Debug CMakeFiles/Qt_blog.dir/Qt_blog_autogen/mocs_compilation.cpp.obj CMakeFiles/Qt_blog.dir/main.cpp.obj CMakeFiles/Qt_blog.dir/loginwindow.cpp.obj CMakeFiles/Qt_blog.dir/blogwindow.cpp.obj CMakeFiles/Qt_blog.dir/createaccountwindow.cpp.obj CMakeFiles/Qt_blog.dir/json.cpp.obj | C$:/Qt/6.2.3/mingw_64/lib/libQt6Widgets.a C$:/Qt/6.2.3/mingw_64/lib/libQt6Gui.a C$:/Qt/6.2.3/mingw_64/lib/libQt6Core.a C$:/Qt/6.2.3/mingw_64/lib/libQt6EntryPoint.a || Qt_blog_autogen Qt_blog_autogen_timestamp_deps
   FLAGS = -g
   LINK_FLAGS = -mwindows
   LINK_LIBRARIES = C:/Qt/6.2.3/mingw_64/lib/libQt6Widgets.a  C:/Qt/6.2.3/mingw_64/lib/libQt6Gui.a  C:/Qt/6.2.3/mingw_64/lib/libQt6Core.a  -lmpr  -luserenv  -lmingw32  C:/Qt/6.2.3/mingw_64/lib/libQt6EntryPoint.a  -lshell32  -ld3d11  -ldxgi  -ldxguid  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
@@ -148,7 +156,7 @@ build Qt_blog_autogen: phony CMakeFiles/Qt_blog_autogen Qt_blog_autogen/include/
 #############################################
 # Custom command for C:\Users\ender\OneDrive\Documents\GitHub\EGUI_TP1\Qt_blog\Qt_blog_en_GB.ts
 
-build C$:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/Qt_blog/Qt_blog_en_GB.ts: CUSTOM_COMMAND C$:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/Qt_blog/blogwindow.cpp C$:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/Qt_blog/blogwindow.h C$:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/Qt_blog/blogwindow.ui C$:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/Qt_blog/createaccountwindow.cpp C$:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/Qt_blog/createaccountwindow.h C$:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/Qt_blog/createaccountwindow.ui C$:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/Qt_blog/loginwindow.cpp C$:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/Qt_blog/loginwindow.h C$:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/Qt_blog/loginwindow.ui C$:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/Qt_blog/main.cpp || Qt_blog_autogen Qt_blog_autogen_timestamp_deps
+build C$:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/Qt_blog/Qt_blog_en_GB.ts: CUSTOM_COMMAND C$:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/Qt_blog/blogwindow.cpp C$:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/Qt_blog/blogwindow.h C$:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/Qt_blog/blogwindow.ui C$:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/Qt_blog/createaccountwindow.cpp C$:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/Qt_blog/createaccountwindow.h C$:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/Qt_blog/createaccountwindow.ui C$:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/Qt_blog/json.cpp C$:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/Qt_blog/json.h C$:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/Qt_blog/loginwindow.cpp C$:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/Qt_blog/loginwindow.h C$:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/Qt_blog/loginwindow.ui C$:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/Qt_blog/main.cpp || Qt_blog_autogen Qt_blog_autogen_timestamp_deps
   COMMAND = cmd.exe /C "cd /D C:\Users\ender\OneDrive\Documents\GitHub\EGUI_TP1\build-Qt_blog-Desktop_Qt_6_2_3_MinGW_64_bit-Debug && C:\Qt\6.2.3\mingw_64\bin\lupdate.exe @C:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/build-Qt_blog-Desktop_Qt_6_2_3_MinGW_64_bit-Debug/CMakeFiles/Qt_blog_en_GB.ts_lst_file -ts C:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/Qt_blog/Qt_blog_en_GB.ts"
   DESC = Generating C:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/Qt_blog/Qt_blog_en_GB.ts
   restat = 1
@@ -167,7 +175,7 @@ build Qt_blog_autogen/timestamp Qt_blog_autogen/mocs_compilation.cpp | ${cmake_n
 #############################################
 # Phony custom command for CMakeFiles\Qt_blog_autogen_timestamp_deps
 
-build CMakeFiles/Qt_blog_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/Qt_blog_autogen_timestamp_deps: phony C$:/Qt/6.2.3/mingw_64/./bin/uic.exe C$:/Qt/6.2.3/mingw_64/bin/Qt6Core.dll C$:/Qt/6.2.3/mingw_64/./bin/moc.exe C$:/Qt/6.2.3/mingw_64/bin/Qt6Widgets.dll
+build CMakeFiles/Qt_blog_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/Qt_blog_autogen_timestamp_deps: phony C$:/Qt/6.2.3/mingw_64/./bin/uic.exe C$:/Qt/6.2.3/mingw_64/./bin/moc.exe C$:/Qt/6.2.3/mingw_64/bin/Qt6Core.dll C$:/Qt/6.2.3/mingw_64/bin/Qt6Widgets.dll
 
 
 #############################################

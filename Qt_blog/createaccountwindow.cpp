@@ -12,3 +12,11 @@ CreateAccountWindow::~CreateAccountWindow()
 {
     delete ui;
 }
+
+void CreateAccountWindow::on_createAccountPushButton_clicked()
+{
+    json myJson;
+    QString test, test2, test3;
+    myJson.writeJson(test, test2, test3);
+}
+

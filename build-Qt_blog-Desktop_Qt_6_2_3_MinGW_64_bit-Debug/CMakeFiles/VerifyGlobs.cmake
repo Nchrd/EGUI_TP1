@@ -43,6 +43,7 @@ file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/ender/OneDrive/Docum
 set(OLD_GLOB
   "C:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/Qt_blog/blogwindow.cpp"
   "C:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/Qt_blog/createaccountwindow.cpp"
+  "C:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/Qt_blog/json.cpp"
   "C:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/Qt_blog/loginwindow.cpp"
   "C:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/Qt_blog/main.cpp"
   )
@@ -65,6 +66,7 @@ file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/ender/OneDrive/Docum
 set(OLD_GLOB
   "C:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/Qt_blog/blogwindow.h"
   "C:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/Qt_blog/createaccountwindow.h"
+  "C:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/Qt_blog/json.h"
   "C:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/Qt_blog/loginwindow.h"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")

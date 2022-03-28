@@ -277,6 +277,12 @@
 			null
 		],
 		[
+			"C:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/Qt_blog/json.h",
+			"MU",
+			"EWIEGA46WW/moc_json.cpp",
+			null
+		],
+		[
 			"C:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/Qt_blog/loginwindow.h",
 			"MU",
 			"EWIEGA46WW/moc_loginwindow.cpp",
@@ -316,19 +322,19 @@
 		"C:/Qt/6.2.3/mingw_64/mkspecs/win32-g++",
 		"C:/Qt/6.2.3/mingw_64/include/QtWidgets",
 		"C:/Qt/6.2.3/mingw_64/include/QtGui",
-		"C:/Qt/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++",
-		"C:/Qt/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32",
-		"C:/Qt/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward",
-		"C:/Qt/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include",
-		"C:/Qt/Tools/mingw900_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed",
-		"C:/Qt/Tools/mingw900_64/x86_64-w64-mingw32/include"
+		"C:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++",
+		"C:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32",
+		"C:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward",
+		"C:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include",
+		"C:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed",
+		"C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include"
 	],
 	"MOC_MACRO_NAMES" : [ "Q_OBJECT", "Q_GADGET", "Q_NAMESPACE", "Q_NAMESPACE_EXPORT" ],
 	"MOC_OPTIONS" : [],
 	"MOC_PATH_PREFIX" : false,
 	"MOC_PREDEFS_CMD" : 
 	[
-		"C:/Qt/Tools/mingw900_64/bin/g++.exe",
+		"C:/Qt/Tools/mingw1120_64/bin/g++.exe",
 		"-dM",
 		"-E",
 		"-c",
@@ -354,6 +360,11 @@
 		],
 		[
 			"C:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/Qt_blog/createaccountwindow.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/Qt_blog/json.cpp",
 			"MU",
 			null
 		],

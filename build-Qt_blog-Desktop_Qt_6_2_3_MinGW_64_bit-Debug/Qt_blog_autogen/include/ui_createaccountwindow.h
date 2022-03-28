@@ -42,7 +42,7 @@ public:
     QLineEdit *lineEdit_2;
     QLineEdit *lineEdit_3;
     QLineEdit *lineEdit_4;
-    QPushButton *pushButton;
+    QPushButton *createAccountPushButton;
 
     void setupUi(QMainWindow *CreateAccountWindow)
     {
@@ -114,11 +114,13 @@ public:
 
         lineEdit_3 = new QLineEdit(centralwidget);
         lineEdit_3->setObjectName(QString::fromUtf8("lineEdit_3"));
+        lineEdit_3->setEchoMode(QLineEdit::Password);
 
         verticalLayout_2->addWidget(lineEdit_3);
 
         lineEdit_4 = new QLineEdit(centralwidget);
         lineEdit_4->setObjectName(QString::fromUtf8("lineEdit_4"));
+        lineEdit_4->setEchoMode(QLineEdit::Password);
 
         verticalLayout_2->addWidget(lineEdit_4);
 
@@ -131,10 +133,10 @@ public:
 
         verticalLayout_5->addLayout(verticalLayout_4);
 
-        pushButton = new QPushButton(centralwidget);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        createAccountPushButton = new QPushButton(centralwidget);
+        createAccountPushButton->setObjectName(QString::fromUtf8("createAccountPushButton"));
 
-        verticalLayout_5->addWidget(pushButton);
+        verticalLayout_5->addWidget(createAccountPushButton);
 
         CreateAccountWindow->setCentralWidget(centralwidget);
 
@@ -151,7 +153,7 @@ public:
         label_2->setText(QCoreApplication::translate("CreateAccountWindow", "Username :", nullptr));
         label_3->setText(QCoreApplication::translate("CreateAccountWindow", "Password :", nullptr));
         label_4->setText(QCoreApplication::translate("CreateAccountWindow", "Confirm password :", nullptr));
-        pushButton->setText(QCoreApplication::translate("CreateAccountWindow", "PushButton", nullptr));
+        createAccountPushButton->setText(QCoreApplication::translate("CreateAccountWindow", "Create my account", nullptr));
     } // retranslateUi
 
 };
