@@ -8,6 +8,21 @@
         <source>MainWindow</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="blogwindow.ui" line="56"/>
+        <source>Hello</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="blogwindow.ui" line="63"/>
+        <source>TextLabel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="blogwindow.ui" line="70"/>
+        <source>!</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>CreateAccountWindow</name>

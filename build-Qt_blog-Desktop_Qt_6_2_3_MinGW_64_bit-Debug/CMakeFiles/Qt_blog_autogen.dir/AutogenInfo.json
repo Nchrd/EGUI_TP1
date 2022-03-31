@@ -257,7 +257,8 @@
 		"C:/Qt/6.2.3/mingw_64/lib/cmake/Qt6LinguistTools/Qt6LinguistToolsAdditionalTargetInfo.cmake",
 		"C:/Qt/6.2.3/mingw_64/lib/cmake/Qt6LinguistTools/Qt6LinguistToolsVersionlessTargets.cmake",
 		"C:/Qt/6.2.3/mingw_64/lib/cmake/Qt6LinguistTools/Qt6LinguistToolsMacros.cmake",
-		"C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/CMakeParseArguments.cmake"
+		"C:/Qt/Tools/CMake_64/share/cmake-3.21/Modules/CMakeParseArguments.cmake",
+		"C:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/Qt_blog/test.qrc"
 	],
 	"CMAKE_SOURCE_DIR" : "C:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/Qt_blog",
 	"DEP_FILE" : "C:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/build-Qt_blog-Desktop_Qt_6_2_3_MinGW_64_bit-Debug/Qt_blog_autogen/deps",

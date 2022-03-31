@@ -8,7 +8,7 @@ json::json()
 void json::jsonReader(QString username_p, QString password_p, bool& login){
 
         //Open the Json file
-        QString path = QCoreApplication::applicationDirPath() + "/json/users.json";
+        QString path = ":/rec/json/users.json";
         QFile user_file(path);
         this->jsonOpener(false, user_file);
 
@@ -35,7 +35,7 @@ void json::jsonReader(QString username_p, QString password_p, bool& login){
 void json::writeJson(QString username_m, QString password_p, QString mail_p){
 
     //Open the Json file
-    QString path = QCoreApplication::applicationDirPath() + "/json/users.json";
+    QString path = ":/rec/json/users.json";
     QFile user_file(path);
     this->jsonOpener(true, user_file);
 

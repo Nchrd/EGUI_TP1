@@ -109,6 +109,8 @@ Qt_blog_autogen/timestamp: \
 	C:/Qt/6.2.3/mingw_64/include/QtCore/qvariant.h \
 	C:/Qt/6.2.3/mingw_64/include/QtCore/qvarlengtharray.h \
 	C:/Qt/6.2.3/mingw_64/include/QtCore/qversiontagging.h \
+	C:/Qt/6.2.3/mingw_64/include/QtGui/QPalette \
+	C:/Qt/6.2.3/mingw_64/include/QtGui/QPixmap \
 	C:/Qt/6.2.3/mingw_64/include/QtGui/qbitmap.h \
 	C:/Qt/6.2.3/mingw_64/include/QtGui/qbrush.h \
 	C:/Qt/6.2.3/mingw_64/include/QtGui/qcolor.h \
@@ -500,6 +502,7 @@ Qt_blog_autogen/timestamp: \
 	C:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/Qt_blog/loginwindow.cpp \
 	C:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/Qt_blog/loginwindow.h \
 	C:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/Qt_blog/main.cpp \
+	C:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/Qt_blog/test.qrc \
 	C:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/build-Qt_blog-Desktop_Qt_6_2_3_MinGW_64_bit-Debug/CMakeFiles/3.21.1/CMakeCXXCompiler.cmake \
 	C:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/build-Qt_blog-Desktop_Qt_6_2_3_MinGW_64_bit-Debug/CMakeFiles/3.21.1/CMakeRCCompiler.cmake \
 	C:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/build-Qt_blog-Desktop_Qt_6_2_3_MinGW_64_bit-Debug/CMakeFiles/3.21.1/CMakeSystem.cmake \

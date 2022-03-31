@@ -29,6 +29,7 @@ set(PROJECT_SOURCES
         createaccountwindow.ui
         json.cpp
         json.h
+	test.qrc
         ${TS_FILES}
 )
 

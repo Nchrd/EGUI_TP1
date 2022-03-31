@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/rec">
+        <file>images/profile_pic.png</file>
+        <file>json/users.json</file>
+        <file>images/background.jpg</file>
+    </qresource>
+</RCC>
