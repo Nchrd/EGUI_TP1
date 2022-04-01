@@ -8,6 +8,7 @@
 	"INPUTS" : 
 	[
 		"C:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/Qt_blog/json/users.json",
+		"C:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/Qt_blog/styleSheets/SyNet.qss",
 		"C:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/Qt_blog/images/profile_pic.png",
 		"C:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/Qt_blog/images/background.jpg"
 	],
