@@ -123,6 +123,12 @@ QCheckBox::indicator:disabled
 
 }
 
+/*-----QGroupBox-----*/
+QGroupBox
+{
+    color : #ffffff;
+}
+
 
 /*-----QLineEdit-----*/
 QLineEdit

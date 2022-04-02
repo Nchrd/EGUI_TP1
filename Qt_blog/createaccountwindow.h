@@ -2,6 +2,7 @@
 #define CREATEACCOUNTWINDOW_H
 
 #include "json.h"
+#include "blogwindow.h"
 
 #include <QMainWindow>
 

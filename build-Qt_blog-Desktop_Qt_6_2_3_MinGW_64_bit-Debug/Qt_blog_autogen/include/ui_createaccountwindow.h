@@ -38,10 +38,10 @@ public:
     QLabel *label_3;
     QLabel *label_4;
     QVBoxLayout *verticalLayout_2;
-    QLineEdit *lineEdit;
-    QLineEdit *lineEdit_2;
-    QLineEdit *lineEdit_3;
-    QLineEdit *lineEdit_4;
+    QLineEdit *mailLineEdit;
+    QLineEdit *usernameLineEdit;
+    QLineEdit *passwordLineEdit;
+    QLineEdit *confirmPasswordLineEdit;
     QPushButton *createAccountPushButton;
 
     void setupUi(QMainWindow *CreateAccountWindow)
@@ -102,27 +102,27 @@ public:
 
         verticalLayout_2 = new QVBoxLayout();
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
-        lineEdit = new QLineEdit(centralwidget);
-        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
+        mailLineEdit = new QLineEdit(centralwidget);
+        mailLineEdit->setObjectName(QString::fromUtf8("mailLineEdit"));
 
-        verticalLayout_2->addWidget(lineEdit);
+        verticalLayout_2->addWidget(mailLineEdit);
 
-        lineEdit_2 = new QLineEdit(centralwidget);
-        lineEdit_2->setObjectName(QString::fromUtf8("lineEdit_2"));
+        usernameLineEdit = new QLineEdit(centralwidget);
+        usernameLineEdit->setObjectName(QString::fromUtf8("usernameLineEdit"));
 
-        verticalLayout_2->addWidget(lineEdit_2);
+        verticalLayout_2->addWidget(usernameLineEdit);
 
-        lineEdit_3 = new QLineEdit(centralwidget);
-        lineEdit_3->setObjectName(QString::fromUtf8("lineEdit_3"));
-        lineEdit_3->setEchoMode(QLineEdit::Password);
+        passwordLineEdit = new QLineEdit(centralwidget);
+        passwordLineEdit->setObjectName(QString::fromUtf8("passwordLineEdit"));
+        passwordLineEdit->setEchoMode(QLineEdit::Password);
 
-        verticalLayout_2->addWidget(lineEdit_3);
+        verticalLayout_2->addWidget(passwordLineEdit);
 
-        lineEdit_4 = new QLineEdit(centralwidget);
-        lineEdit_4->setObjectName(QString::fromUtf8("lineEdit_4"));
-        lineEdit_4->setEchoMode(QLineEdit::Password);
+        confirmPasswordLineEdit = new QLineEdit(centralwidget);
+        confirmPasswordLineEdit->setObjectName(QString::fromUtf8("confirmPasswordLineEdit"));
+        confirmPasswordLineEdit->setEchoMode(QLineEdit::Password);
 
-        verticalLayout_2->addWidget(lineEdit_4);
+        verticalLayout_2->addWidget(confirmPasswordLineEdit);
 
 
         horizontalLayout->addLayout(verticalLayout_2);

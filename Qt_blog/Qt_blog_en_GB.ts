@@ -70,32 +70,32 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="loginwindow.ui" line="27"/>
+        <location filename="loginwindow.ui" line="118"/>
         <source>Login to the EGUI Blog !</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="loginwindow.ui" line="39"/>
+        <location filename="loginwindow.ui" line="130"/>
         <source>Username</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="loginwindow.ui" line="53"/>
+        <location filename="loginwindow.ui" line="144"/>
         <source>Password </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="loginwindow.ui" line="72"/>
+        <location filename="loginwindow.ui" line="163"/>
         <source>Show password</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="loginwindow.ui" line="85"/>
+        <location filename="loginwindow.ui" line="176"/>
         <source>Login</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="loginwindow.ui" line="97"/>
+        <location filename="loginwindow.ui" line="188"/>
         <source>You have no account ? Create one !</source>
         <translation type="unfinished"></translation>
     </message>

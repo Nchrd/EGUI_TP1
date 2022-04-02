@@ -16,7 +16,18 @@ CreateAccountWindow::~CreateAccountWindow()
 void CreateAccountWindow::on_createAccountPushButton_clicked()
 {
     json myJson;
-    QString test, test2, test3;
-    myJson.writeJson(test, test2, test3);
+    bool canLogin = false;
+    QString username = ui->usernameLineEdit->text();
+    QString mail = ui->mailLineEdit->text();
+    QString password = ui->passwordLineEdit->text();
+    QString confirmPassword = ui->confirmPasswordLineEdit->text();
+
+    myJson.writeJson(username, password, confirmPassword, mail, canLogin);
+
+    if(canLogin == true){
+        this->close();
+        BlogWindow *blogWindow = new BlogWindow;
+        blogWindow->show();
+    }
 }
 

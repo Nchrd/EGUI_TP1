@@ -7,46 +7,43 @@ json::json()
 
 void json::jsonReader(QString username_p, QString password_p, bool& login){
 
+    QJsonObject data_file;
+    this->jsonOpener(false, data_file);
+
+    jsonLoginUserParser(username_p, password_p, data_file, login);
+}
+
+void json::writeJson(QString username_m, QString password_p,QString confirmPassword_p, QString mail_p, bool& login){
+
+    QJsonObject data_file;
+    this->jsonOpener(false, data_file);
+
+    jsonRegisterUserParser(username_m, password_p, confirmPassword_p, mail_p, data_file, login);
+
+    if(login == true){
+        QJsonObject mainObject;
+        mainObject["mail"] = "monmail";
+        mainObject["password"] = "bitecul";
+
+        QByteArray byteArray;
+        byteArray = QJsonDocument(mainObject).toJson();
+
         //Open the Json file
         QString path = ":/rec/json/users.json";
         QFile user_file(path);
-        this->jsonOpener(false, user_file);
+        this->jsonModeOpener(true, user_file);
 
-        //Convert the QString text to Bytearray first
-        QByteArray jsonData ;
-        jsonData = user_file.readAll();
+        user_file.write(byteArray);
         user_file.close();
-
-        //Debug
-        //if(jsonData.isEmpty() == false) qDebug() << "JSon file not empty";
-
-        //Assign the json text to a JSON object
-        QJsonDocument jsonDocument = QJsonDocument::fromJson(jsonData);
-
-        //Debug
-        //if(jsonDocument.isObject() == true) qDebug() << "It a JSON object";
-
-        //Then get the main JSON object and get the datas in it
-        QJsonObject object = jsonDocument.object();
-
-        jsonUserParser(username_p, password_p, object, login);
+    }
 }
 
-void json::writeJson(QString username_m, QString password_p, QString mail_p){
-
-    //Open the Json file
-    QString path = ":/rec/json/users.json";
-    QFile user_file(path);
-    this->jsonOpener(true, user_file);
-
-}
-
-void json::jsonOpener(bool mode, QFile& users){
+void json::jsonModeOpener(bool mode, QFile& users){
     //True = write
     //False = read
     if(mode == true){
-        if(users.open(QIODevice::WriteOnly)){
-                qDebug() << "Json file opened";
+        if(!users.open(QIODevice::WriteOnly)){
+                qDebug() << "Json file not opened";
             }
     } else if(mode == false) {
         if(users.open(QIODevice::ReadOnly)){
@@ -55,7 +52,18 @@ void json::jsonOpener(bool mode, QFile& users){
     }
 }
 
-void json::jsonUserParser(QString username_p, QString password_p, QJsonObject object, bool& login){
+void json::jsonOpener(bool mode, QJsonObject& data_file){
+
+    //Open the Json file
+    QString path = ":/rec/json/users.json";
+    QFile user_file(path);
+    this->jsonModeOpener(mode, user_file);
+
+    data_file = this->jsonConverter(user_file);
+    user_file.close();
+}
+
+void json::jsonLoginUserParser(QString username_p, QString password_p, QJsonObject object, bool& login){
 
     QJsonValue username = object.value(username_p);
 
@@ -79,4 +87,58 @@ void json::jsonUserParser(QString username_p, QString password_p, QJsonObject ob
             errorMsg.critical(0,"Error","Wrong password !");
         }
     }
+}
+
+void json::jsonRegisterUserParser(QString username_p, QString password_p, QString confirmPassword_p, QString mail_p, QJsonObject object, bool& login){
+
+    QJsonValue username = object.value(username_p);
+
+    if(username == QJsonValue::Undefined){
+        //Username is free
+
+        QJsonObject identifiers = object.value(username_p).toObject();
+        QJsonValue mail = identifiers.value("mail");
+
+        if(mail == QJsonValue::Undefined){
+            //mail is free
+            if(password_p == confirmPassword_p){
+                login = true;
+            }else{
+                QMessageBox errorMsg;
+                errorMsg.critical(0,"Error","The confirmation of your password is wrong !");
+                login = false;
+            }
+        }else{
+            QMessageBox errorMsg;
+            errorMsg.critical(0,"Error","Mail already taken !");
+            login = false;
+        }
+
+    }else{
+        QMessageBox errorMsg;
+        errorMsg.critical(0,"Error","Username already taken !");
+        login = false;
+    }
+}
+
+QJsonObject json::jsonConverter(QFile& user_file){
+
+    //Convert the QString text to Bytearray first
+    QByteArray jsonData ;
+    jsonData = user_file.readAll();
+    user_file.close();
+
+    //Debug
+    //if(jsonData.isEmpty() == false) qDebug() << "JSon file not empty";
+
+    //Assign the json text to a JSON object
+    QJsonDocument jsonDocument = QJsonDocument::fromJson(jsonData);
+
+    //Debug
+    //if(jsonDocument.isObject() == true) qDebug() << "It a JSON object";
+
+    //Then get the main JSON object and get the datas in it
+    QJsonObject object = jsonDocument.object();
+
+    return object;
 }
