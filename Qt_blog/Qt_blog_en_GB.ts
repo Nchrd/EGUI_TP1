@@ -5,22 +5,27 @@
     <name>BlogWindow</name>
     <message>
         <location filename="blogwindow.ui" line="14"/>
-        <source>MainWindow</source>
+        <source>Your blog</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="blogwindow.ui" line="56"/>
-        <source>Hello</source>
+        <location filename="blogwindow.ui" line="52"/>
+        <source>Hello !</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="blogwindow.ui" line="63"/>
-        <source>TextLabel</source>
+        <location filename="blogwindow.ui" line="62"/>
+        <source>Delete a post</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="blogwindow.ui" line="70"/>
-        <source>!</source>
+        <location filename="blogwindow.ui" line="71"/>
+        <source>Create a post</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="blogwindow.ui" line="78"/>
+        <source>Disconnect</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

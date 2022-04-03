@@ -13,8 +13,12 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QListWidget>
 #include <QtWidgets/QMainWindow>
+#include <QtWidgets/QPushButton>
+#include <QtWidgets/QSpacerItem>
+#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -23,13 +27,19 @@ class Ui_BlogWindow
 {
 public:
     QWidget *centralwidget;
-    QListWidget *listWidget;
-    QLabel *profilePicLabel;
-    QWidget *layoutWidget;
+    QHBoxLayout *horizontalLayout_2;
     QHBoxLayout *horizontalLayout;
+    QVBoxLayout *verticalLayout_2;
+    QVBoxLayout *verticalLayout;
+    QLabel *profilePicLabel;
     QLabel *helloLabel;
-    QLabel *usernameLabel;
-    QLabel *label;
+    QPushButton *deletePostPushButton;
+    QPushButton *postPushButton;
+    QPushButton *disconnectPushButton;
+    QSpacerItem *verticalSpacer;
+    QVBoxLayout *verticalLayout_3;
+    QLineEdit *postLineEdit;
+    QListWidget *blogListWidget;
 
     void setupUi(QMainWindow *BlogWindow)
     {
@@ -38,33 +48,71 @@ public:
         BlogWindow->resize(870, 609);
         centralwidget = new QWidget(BlogWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
-        listWidget = new QListWidget(centralwidget);
-        listWidget->setObjectName(QString::fromUtf8("listWidget"));
-        listWidget->setGeometry(QRect(210, 70, 441, 521));
+        horizontalLayout_2 = new QHBoxLayout(centralwidget);
+        horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
+        horizontalLayout = new QHBoxLayout();
+        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
+        verticalLayout_2 = new QVBoxLayout();
+        verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
+        verticalLayout = new QVBoxLayout();
+        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         profilePicLabel = new QLabel(centralwidget);
         profilePicLabel->setObjectName(QString::fromUtf8("profilePicLabel"));
-        profilePicLabel->setGeometry(QRect(60, 70, 63, 51));
+        profilePicLabel->setMaximumSize(QSize(100, 100));
+        profilePicLabel->setPixmap(QPixmap(QString::fromUtf8(":/rec/images/profile_pic.png")));
         profilePicLabel->setScaledContents(true);
-        layoutWidget = new QWidget(centralwidget);
-        layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
-        layoutWidget->setGeometry(QRect(30, 120, 119, 22));
-        horizontalLayout = new QHBoxLayout(layoutWidget);
-        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
-        horizontalLayout->setContentsMargins(0, 0, 0, 0);
-        helloLabel = new QLabel(layoutWidget);
+
+        verticalLayout->addWidget(profilePicLabel);
+
+        helloLabel = new QLabel(centralwidget);
         helloLabel->setObjectName(QString::fromUtf8("helloLabel"));
+        helloLabel->setMaximumSize(QSize(16777215, 50));
+        helloLabel->setAlignment(Qt::AlignCenter);
 
-        horizontalLayout->addWidget(helloLabel);
+        verticalLayout->addWidget(helloLabel);
 
-        usernameLabel = new QLabel(layoutWidget);
-        usernameLabel->setObjectName(QString::fromUtf8("usernameLabel"));
+        deletePostPushButton = new QPushButton(centralwidget);
+        deletePostPushButton->setObjectName(QString::fromUtf8("deletePostPushButton"));
 
-        horizontalLayout->addWidget(usernameLabel);
+        verticalLayout->addWidget(deletePostPushButton);
 
-        label = new QLabel(layoutWidget);
-        label->setObjectName(QString::fromUtf8("label"));
 
-        horizontalLayout->addWidget(label);
+        verticalLayout_2->addLayout(verticalLayout);
+
+        postPushButton = new QPushButton(centralwidget);
+        postPushButton->setObjectName(QString::fromUtf8("postPushButton"));
+
+        verticalLayout_2->addWidget(postPushButton);
+
+        disconnectPushButton = new QPushButton(centralwidget);
+        disconnectPushButton->setObjectName(QString::fromUtf8("disconnectPushButton"));
+
+        verticalLayout_2->addWidget(disconnectPushButton);
+
+        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout_2->addItem(verticalSpacer);
+
+
+        horizontalLayout->addLayout(verticalLayout_2);
+
+        verticalLayout_3 = new QVBoxLayout();
+        verticalLayout_3->setObjectName(QString::fromUtf8("verticalLayout_3"));
+        postLineEdit = new QLineEdit(centralwidget);
+        postLineEdit->setObjectName(QString::fromUtf8("postLineEdit"));
+
+        verticalLayout_3->addWidget(postLineEdit);
+
+        blogListWidget = new QListWidget(centralwidget);
+        blogListWidget->setObjectName(QString::fromUtf8("blogListWidget"));
+
+        verticalLayout_3->addWidget(blogListWidget);
+
+
+        horizontalLayout->addLayout(verticalLayout_3);
+
+
+        horizontalLayout_2->addLayout(horizontalLayout);
 
         BlogWindow->setCentralWidget(centralwidget);
 
@@ -75,11 +123,12 @@ public:
 
     void retranslateUi(QMainWindow *BlogWindow)
     {
-        BlogWindow->setWindowTitle(QCoreApplication::translate("BlogWindow", "MainWindow", nullptr));
+        BlogWindow->setWindowTitle(QCoreApplication::translate("BlogWindow", "Your blog", nullptr));
         profilePicLabel->setText(QString());
-        helloLabel->setText(QCoreApplication::translate("BlogWindow", "Hello", nullptr));
-        usernameLabel->setText(QCoreApplication::translate("BlogWindow", "TextLabel", nullptr));
-        label->setText(QCoreApplication::translate("BlogWindow", "!", nullptr));
+        helloLabel->setText(QCoreApplication::translate("BlogWindow", "Hello !", nullptr));
+        deletePostPushButton->setText(QCoreApplication::translate("BlogWindow", "Delete a post", nullptr));
+        postPushButton->setText(QCoreApplication::translate("BlogWindow", "Create a post", nullptr));
+        disconnectPushButton->setText(QCoreApplication::translate("BlogWindow", "Disconnect", nullptr));
     } // retranslateUi
 
 };

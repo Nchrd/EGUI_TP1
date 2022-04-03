@@ -36,12 +36,14 @@ void json::writeJson(QString username_m, QString password_p,QString confirmPassw
         //Open the Json file
         QString path = ":/rec/json/test.json";
         QFile user_file(path);
+
         qDebug() << user_file.permissions();
         user_file.setPermissions(QFile::WriteOwner);
         qDebug() << user_file.permissions();
+
         this->jsonModeOpener(true, user_file);
 
-        user_file.write(byteArray);
+        //user_file.write(byteArray);
         user_file.close();
     }
 }
@@ -50,9 +52,9 @@ void json::jsonModeOpener(bool mode, QFile& users){
     //True = write
     //False = read
     if(mode == true){
-        users.setPermissions(QFileDevice::WriteOther);
-        if(!users.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Truncate)){
+        if(!users.open(QFile::WriteOnly)){
                 qDebug() << "Json file not opened";
+                qCritical() << users.errorString();
             }
     } else if(mode == false) {
         if(users.open(QIODevice::ReadOnly)){
@@ -69,6 +71,7 @@ void json::jsonOpener(bool mode, QJsonObject& data_file){
     this->jsonModeOpener(mode, user_file);
 
     data_file = this->jsonConverter(user_file);
+    user_file.close();
 }
 
 void json::jsonLoginUserParser(QString username_p, QString password_p, QJsonObject object, bool& login){
@@ -93,6 +96,7 @@ void json::jsonLoginUserParser(QString username_p, QString password_p, QJsonObje
             login = false;
             QMessageBox errorMsg;
             errorMsg.critical(0,"Error","Wrong password !");
+            return;
         }
     }
 }
@@ -134,7 +138,6 @@ QJsonObject json::jsonConverter(QFile& user_file){
     //Convert the QString text to Bytearray first
     QByteArray jsonData ;
     jsonData = user_file.readAll();
-    user_file.close();
 
     //Debug
     //if(jsonData.isEmpty() == false) qDebug() << "JSon file not empty";

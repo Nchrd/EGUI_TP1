@@ -6,8 +6,13 @@
 #include <QFile>
 #include <QDebug>
 
+extern Q_CORE_EXPORT int qt_ntfs_permission_lookup;
+
+
 int main(int argc, char *argv[])
-{
+{    
+    qt_ntfs_permission_lookup++;
+
     QApplication a(argc, argv);
 
     QFile styleSheetFile(":/rec/styleSheets/SyNet.qss");
