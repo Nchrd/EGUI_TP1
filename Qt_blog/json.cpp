@@ -20,17 +20,25 @@ void json::writeJson(QString username_m, QString password_p,QString confirmPassw
 
     jsonRegisterUserParser(username_m, password_p, confirmPassword_p, mail_p, data_file, login);
 
+
     if(login == true){
+        QJsonObject data;
+
         QJsonObject mainObject;
-        mainObject["mail"] = "monmail";
-        mainObject["password"] = "bitecul";
+        mainObject.insert("mail", mail_p);
+        mainObject.insert("password", password_p);
+
+        data.insert(username_m, mainObject);
 
         QByteArray byteArray;
-        byteArray = QJsonDocument(mainObject).toJson();
+        byteArray = QJsonDocument(data).toJson();
 
         //Open the Json file
-        QString path = ":/rec/json/users.json";
+        QString path = ":/rec/json/test.json";
         QFile user_file(path);
+        qDebug() << user_file.permissions();
+        user_file.setPermissions(QFile::WriteOwner);
+        qDebug() << user_file.permissions();
         this->jsonModeOpener(true, user_file);
 
         user_file.write(byteArray);
@@ -42,7 +50,8 @@ void json::jsonModeOpener(bool mode, QFile& users){
     //True = write
     //False = read
     if(mode == true){
-        if(!users.open(QIODevice::WriteOnly)){
+        users.setPermissions(QFileDevice::WriteOther);
+        if(!users.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Truncate)){
                 qDebug() << "Json file not opened";
             }
     } else if(mode == false) {
@@ -60,7 +69,6 @@ void json::jsonOpener(bool mode, QJsonObject& data_file){
     this->jsonModeOpener(mode, user_file);
 
     data_file = this->jsonConverter(user_file);
-    user_file.close();
 }
 
 void json::jsonLoginUserParser(QString username_p, QString password_p, QJsonObject object, bool& login){
