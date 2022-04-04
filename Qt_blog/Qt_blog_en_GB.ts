@@ -9,22 +9,27 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="blogwindow.ui" line="52"/>
-        <source>Hello !</source>
+        <location filename="blogwindow.ui" line="56"/>
+        <source>Hello </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="blogwindow.ui" line="62"/>
+        <location filename="blogwindow.ui" line="66"/>
+        <source>!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="blogwindow.ui" line="92"/>
         <source>Delete a post</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="blogwindow.ui" line="71"/>
+        <location filename="blogwindow.ui" line="99"/>
         <source>Create a post</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="blogwindow.ui" line="78"/>
+        <location filename="blogwindow.ui" line="106"/>
         <source>Disconnect</source>
         <translation type="unfinished"></translation>
     </message>
@@ -62,7 +67,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="createaccountwindow.ui" line="106"/>
+        <location filename="createaccountwindow.ui" line="76"/>
+        <source>Blog Title</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="createaccountwindow.ui" line="116"/>
         <source>Create my account</source>
         <translation type="unfinished"></translation>
     </message>

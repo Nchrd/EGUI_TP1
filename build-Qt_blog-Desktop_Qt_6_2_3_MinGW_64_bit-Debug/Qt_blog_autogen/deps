@@ -3,6 +3,7 @@ Qt_blog_autogen/timestamp: \
 	C:/Qt/6.2.3/mingw_64/include/QtCore/QCoreApplication \
 	C:/Qt/6.2.3/mingw_64/include/QtCore/QDebug \
 	C:/Qt/6.2.3/mingw_64/include/QtCore/QFile \
+	C:/Qt/6.2.3/mingw_64/include/QtCore/QIODevice \
 	C:/Qt/6.2.3/mingw_64/include/QtCore/QJsonArray \
 	C:/Qt/6.2.3/mingw_64/include/QtCore/QJsonDocument \
 	C:/Qt/6.2.3/mingw_64/include/QtCore/QJsonObject \
@@ -111,6 +112,7 @@ Qt_blog_autogen/timestamp: \
 	C:/Qt/6.2.3/mingw_64/include/QtCore/qversiontagging.h \
 	C:/Qt/6.2.3/mingw_64/include/QtGui/QPalette \
 	C:/Qt/6.2.3/mingw_64/include/QtGui/QPixmap \
+	C:/Qt/6.2.3/mingw_64/include/QtGui/QTextOption \
 	C:/Qt/6.2.3/mingw_64/include/QtGui/qbitmap.h \
 	C:/Qt/6.2.3/mingw_64/include/QtGui/qbrush.h \
 	C:/Qt/6.2.3/mingw_64/include/QtGui/qcolor.h \
@@ -129,6 +131,7 @@ Qt_blog_autogen/timestamp: \
 	C:/Qt/6.2.3/mingw_64/include/QtGui/qregion.h \
 	C:/Qt/6.2.3/mingw_64/include/QtGui/qrgb.h \
 	C:/Qt/6.2.3/mingw_64/include/QtGui/qrgba64.h \
+	C:/Qt/6.2.3/mingw_64/include/QtGui/qtextoption.h \
 	C:/Qt/6.2.3/mingw_64/include/QtGui/qtgui-config.h \
 	C:/Qt/6.2.3/mingw_64/include/QtGui/qtguiglobal.h \
 	C:/Qt/6.2.3/mingw_64/include/QtGui/qtransform.h \

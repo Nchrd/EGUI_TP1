@@ -2,6 +2,8 @@
 #define BLOGWINDOW_H
 
 #include <QMainWindow>
+#include <QTextOption>
+
 #include "json.h"
 
 namespace Ui {

@@ -37,11 +37,13 @@ public:
     QLabel *label_2;
     QLabel *label_3;
     QLabel *label_4;
+    QLabel *label_6;
     QVBoxLayout *verticalLayout_2;
     QLineEdit *mailLineEdit;
     QLineEdit *usernameLineEdit;
     QLineEdit *passwordLineEdit;
     QLineEdit *confirmPasswordLineEdit;
+    QLineEdit *blogTitleLineEdit;
     QPushButton *createAccountPushButton;
 
     void setupUi(QMainWindow *CreateAccountWindow)
@@ -97,6 +99,11 @@ public:
 
         verticalLayout->addWidget(label_4);
 
+        label_6 = new QLabel(centralwidget);
+        label_6->setObjectName(QString::fromUtf8("label_6"));
+
+        verticalLayout->addWidget(label_6);
+
 
         horizontalLayout->addLayout(verticalLayout);
 
@@ -123,6 +130,11 @@ public:
         confirmPasswordLineEdit->setEchoMode(QLineEdit::Password);
 
         verticalLayout_2->addWidget(confirmPasswordLineEdit);
+
+        blogTitleLineEdit = new QLineEdit(centralwidget);
+        blogTitleLineEdit->setObjectName(QString::fromUtf8("blogTitleLineEdit"));
+
+        verticalLayout_2->addWidget(blogTitleLineEdit);
 
 
         horizontalLayout->addLayout(verticalLayout_2);
@@ -153,6 +165,7 @@ public:
         label_2->setText(QCoreApplication::translate("CreateAccountWindow", "Username :", nullptr));
         label_3->setText(QCoreApplication::translate("CreateAccountWindow", "Password :", nullptr));
         label_4->setText(QCoreApplication::translate("CreateAccountWindow", "Confirm password :", nullptr));
+        label_6->setText(QCoreApplication::translate("CreateAccountWindow", "Blog Title", nullptr));
         createAccountPushButton->setText(QCoreApplication::translate("CreateAccountWindow", "Create my account", nullptr));
     } // retranslateUi
 

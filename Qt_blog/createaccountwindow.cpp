@@ -21,8 +21,10 @@ void CreateAccountWindow::on_createAccountPushButton_clicked()
     QString mail = ui->mailLineEdit->text();
     QString password = ui->passwordLineEdit->text();
     QString confirmPassword = ui->confirmPasswordLineEdit->text();
+    QString blogTitle = ui->blogTitleLineEdit->text();
 
     myJson.writeJson(username, password, confirmPassword, mail, canLogin);
+    myJson.createBlog(username, blogTitle);
 
     if(canLogin == true){
         this->close();

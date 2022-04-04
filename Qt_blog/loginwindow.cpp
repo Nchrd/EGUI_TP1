@@ -25,7 +25,7 @@ void LoginWindow::on_loginPushButton_clicked()
     QString password = ui->passwordLineEdit->text();
     QString username = ui->usernameLineEdit->text();
 
-    myJson.jsonReader(username, password, canLogin);
+    myJson.jsonUserReader(username, password, canLogin);
 
     if(canLogin == true){
         this->close();

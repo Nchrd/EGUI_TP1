@@ -183,7 +183,7 @@ build Qt_blog_autogen/timestamp Qt_blog_autogen/mocs_compilation.cpp | ${cmake_n
 #############################################
 # Custom command for Qt_blog_autogen\EWIEGA46WW\qrc_test.cpp
 
-build Qt_blog_autogen/EWIEGA46WW/qrc_test.cpp | ${cmake_ninja_workdir}Qt_blog_autogen/EWIEGA46WW/qrc_test.cpp: CUSTOM_COMMAND C$:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/Qt_blog/test.qrc CMakeFiles/Qt_blog_autogen.dir/AutoRcc_test_EWIEGA46WW_Info.json C$:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/Qt_blog/json/users.json C$:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/Qt_blog/styleSheets/SyNet.qss C$:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/Qt_blog/images/profile_pic.png C$:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/Qt_blog/images/background.jpg C$:/Qt/6.2.3/mingw_64/./bin/rcc.exe || Qt_blog_autogen Qt_blog_autogen_timestamp_deps
+build Qt_blog_autogen/EWIEGA46WW/qrc_test.cpp | ${cmake_ninja_workdir}Qt_blog_autogen/EWIEGA46WW/qrc_test.cpp: CUSTOM_COMMAND C$:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/Qt_blog/test.qrc CMakeFiles/Qt_blog_autogen.dir/AutoRcc_test_EWIEGA46WW_Info.json C$:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/Qt_blog/styleSheets/SyNet.qss C$:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/Qt_blog/images/profile_pic.png C$:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/Qt_blog/images/background.jpg C$:/Qt/6.2.3/mingw_64/./bin/rcc.exe || Qt_blog_autogen Qt_blog_autogen_timestamp_deps
   COMMAND = cmd.exe /C "cd /D C:\Users\ender\OneDrive\Documents\GitHub\EGUI_TP1\build-Qt_blog-Desktop_Qt_6_2_3_MinGW_64_bit-Debug && C:\Qt\Tools\CMake_64\bin\cmake.exe -E cmake_autorcc C:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/build-Qt_blog-Desktop_Qt_6_2_3_MinGW_64_bit-Debug/CMakeFiles/Qt_blog_autogen.dir/AutoRcc_test_EWIEGA46WW_Info.json Debug"
   DESC = Automatic RCC for test.qrc
   restat = 1
@@ -192,7 +192,7 @@ build Qt_blog_autogen/EWIEGA46WW/qrc_test.cpp | ${cmake_ninja_workdir}Qt_blog_au
 #############################################
 # Phony custom command for CMakeFiles\Qt_blog_autogen_timestamp_deps
 
-build CMakeFiles/Qt_blog_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/Qt_blog_autogen_timestamp_deps: phony C$:/Qt/6.2.3/mingw_64/bin/Qt6Core.dll C$:/Qt/6.2.3/mingw_64/./bin/moc.exe C$:/Qt/6.2.3/mingw_64/./bin/uic.exe C$:/Qt/6.2.3/mingw_64/bin/Qt6Widgets.dll
+build CMakeFiles/Qt_blog_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/Qt_blog_autogen_timestamp_deps: phony C$:/Qt/6.2.3/mingw_64/./bin/uic.exe C$:/Qt/6.2.3/mingw_64/bin/Qt6Core.dll C$:/Qt/6.2.3/mingw_64/./bin/moc.exe C$:/Qt/6.2.3/mingw_64/bin/Qt6Widgets.dll
 
 
 #############################################

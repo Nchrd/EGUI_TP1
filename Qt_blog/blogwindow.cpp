@@ -4,6 +4,7 @@
 BlogWindow::BlogWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::BlogWindow)
 {
     ui->setupUi(this);
+    ui->usernameLabel->setText("");
 }
 
 BlogWindow::~BlogWindow()
@@ -24,17 +25,30 @@ void BlogWindow::on_deletePostPushButton_clicked()
 
 void BlogWindow::on_postPushButton_clicked()
 {
-    QString str = ui->postLineEdit->text();
+    QString title = ui->titleLineEdit->text();
+    ui->postTextEdit->setAcceptRichText(true);
+    QString post = ui->postTextEdit->toPlainText();
     QDateTime date = QDateTime::currentDateTime();
     QString formattedTime = date.toString("dd.MM.yyyy hh:mm:ss");
 
-    if(str == "") return;
+    if(title == "") return;
+    if(post == "") return;
 
-    str.append("\n");
-    str.append("  - posted ");
-    str.append(formattedTime);
+    json myJson;
+    myJson.jsonBlogWriter(title, post, "test", date);
 
-    ui->blogListWidget->addItem(str);
+    title.append("  - posted on ");
+    title.append(formattedTime);
+    title.append("\n");
+    title.append(post);
+
+    QListWidgetItem *item = new QListWidgetItem();
+    item->setText(title);
+    item->setSizeHint(QSize(200, 100));
+
+    ui->blogListWidget->addItem(item);
+    ui->titleLineEdit->clear();
+    ui->postTextEdit->clear();
 }
 
 
