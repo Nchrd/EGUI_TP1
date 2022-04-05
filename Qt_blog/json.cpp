@@ -173,10 +173,6 @@ QJsonObject json::jsonConverter(QFile& user_file, QString username_p){
     return object;
 }
 
-void json::jsonBlogLoader(QString User){
-
-}
-
 void json::jsonBlogWriter(QString title, QString post, QString user, QDateTime date){
     QFile users("blog.json");
     if(!users.open(QIODevice::ReadOnly)) qDebug() << "Error";
@@ -200,7 +196,7 @@ void json::jsonBlogWriter(QString title, QString post, QString user, QDateTime d
     userData["posts"] = arrLog;
     jsonOrgContent[user] = userData;
     QJsonDocument doc(jsonOrgContent);
-    qDebug() << doc;
+    //qDebug() << doc;
 
 
     if(!users.open(QIODevice::WriteOnly)) qDebug() << "Error";

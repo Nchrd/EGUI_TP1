@@ -10,6 +10,7 @@ BlogWindow::BlogWindow(QWidget *parent, QString& user) : QMainWindow(parent), ui
     ui->setupUi(this);
     actualUser = user;
     ui->usernameLabel->setText(user);
+    this->blogLoader(user);
 }
 
 BlogWindow::~BlogWindow()
@@ -66,4 +67,38 @@ void BlogWindow::on_disconnectPushButton_clicked()
 void BlogWindow::on_blogListWidget_currentRowChanged(int currentRow)
 {
     itemSelected = currentRow;
+}
+
+
+void BlogWindow::blogLoader(QString user){
+    QFile blogFile("blog.json");
+    if(!blogFile.open(QIODevice::ReadOnly)) qDebug() << "Can't load blog data";
+
+    QJsonDocument blogData = QJsonDocument::fromJson(blogFile.readAll());
+    blogFile.close();
+
+    QJsonObject blogObject = blogData.object();
+    QJsonObject postData = blogObject[user].toObject();
+    QJsonArray postArray = postData["posts"].toArray();
+
+    for(int i = 0; i < postArray.size(); ++i){
+        QJsonObject objContent = postArray[i].toObject();
+        QStringList key = objContent.keys();
+        QJsonObject dataContent = objContent[key[0]].toObject();
+        QString title = dataContent["title"].toString();
+        QString content = dataContent["post"].toString();
+        QString date = dataContent["date"].toString();
+
+        QString thePost = title;
+        thePost.append("  - posted on ");
+        thePost.append(date);
+        thePost.append("\n");
+        thePost.append(content);
+
+        QListWidgetItem *item = new QListWidgetItem();
+        item->setText(thePost);
+        item->setSizeHint(QSize(200, 100));
+
+        ui->blogListWidget->addItem(item);
+    }
 }

@@ -32,7 +32,6 @@ public:
 
     QJsonObject jsonConverter(QFile& user_file, QString username_p);
 
-    void jsonBlogLoader(QString user);
     void jsonBlogWriter(QString title, QString post, QString user, QDateTime date);
     void createBlog(QString username, QString blogTitle);
     void jsonBlogOpener(bool mode, QJsonObject& data_file, QString username_p);

@@ -19,6 +19,8 @@ public:
     BlogWindow(QWidget *parent, QString& user);
     ~BlogWindow();
 
+    void blogLoader(QString user);
+
 private slots:
     void on_deletePostPushButton_clicked();
 
