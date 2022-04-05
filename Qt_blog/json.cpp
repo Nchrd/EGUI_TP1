@@ -46,17 +46,20 @@ void json::writeJson(QString username_m, QString password_p,QString confirmPassw
     }
 }
 
-void json::jsonModeOpener(bool mode, QFile& users){
-    if(users.exists() == false) users.open(QIODevice::WriteOnly);
+void json::jsonModeOpener(bool mode, QFile& file){
+    if(file.exists() == false){
+        file.open(QIODevice::WriteOnly);
+        return;
+    }
 
     //True = write
     //False = read
     if(mode == true){
-        if(users.open(QFile::WriteOnly)){
+        if(file.open(QFile::WriteOnly)){
                 qDebug() << "Json file opened";
             }
     } else if(mode == false) {
-        if(users.open(QIODevice::ReadOnly)){
+        if(file.open(QIODevice::ReadOnly)){
                 qDebug() << "Json file opened";
             }
     }
@@ -175,47 +178,75 @@ void json::jsonBlogLoader(QString User){
 }
 
 void json::jsonBlogWriter(QString title, QString post, QString user, QDateTime date){
-    QJsonObject data_file;
-    this->jsonBlogOpener(true, data_file, user);
+    QFile users("blog.json");
+    if(!users.open(QIODevice::ReadOnly)) qDebug() << "Error";
 
-    QJsonObject postContent;
-    postContent.insert("title", title);
-    postContent.insert("post content", post);
-    postContent.insert("date", date.toString());
+    QJsonDocument jsonOrg = QJsonDocument::fromJson(users.readAll());
+    users.close();
 
-    if(data_file.value(user) == QJsonValue::Undefined){
-        qDebug() << "No blog here !";
-        return;
-    }else{
+    QString postId = title.toLower();
+    postId.replace(" ", "");
 
-    }
+    QJsonObject postDetails = { {"title", title},
+                                {"post", post},
+                                {"date", date.toString()}};
+    QJsonObject postData = {{postId, postDetails}};
+
+    QJsonObject jsonOrgContent = jsonOrg.object();
+    QJsonObject userData = jsonOrgContent[user].toObject();
+    QJsonArray arrLog = userData["posts"].toArray();
+    arrLog.push_back(postData);
+
+    userData["posts"] = arrLog;
+    jsonOrgContent[user] = userData;
+    QJsonDocument doc(jsonOrgContent);
+    qDebug() << doc;
+
+
+    if(!users.open(QIODevice::WriteOnly)) qDebug() << "Error";
+    qDebug() << users.readAll();
+    users.write(doc.toJson());
+    qDebug() << users.readAll();
+    users.close();
+
 }
 
 void json::createBlog(QString username, QString blogTitle){
-    QJsonObject data_file;
-    this->jsonBlogOpener(true, data_file, username);
+    //Open the Json file
+    QString file_path = "blog.json";
+    QFile user_file_create(file_path);
+    if(user_file_create.exists() == false) user_file_create.open(QIODevice::WriteOnly);
+    user_file_create.close();
 
-    QJsonObject mainObject;
-    mainObject.insert("title", blogTitle);
     QString blogId = blogTitle.toLower();
     blogId.replace(" ", "");
-    mainObject.insert("blogId", blogId);
     QJsonObject posts;
-    mainObject.insert("posts", posts);
 
-    data_file.insert(username, mainObject);
-
-    QByteArray byteArray;
-    byteArray = QJsonDocument(data_file).toJson();
+    QJsonObject blogDetails = { {"title", blogTitle},
+                                {"id", blogId},
+                                {"posts", posts}};
+    QJsonObject newBlog = {{username, blogDetails}};
 
     //Open the Json file
     QString path = "blog.json";
     QFile user_file(path);
 
-    this->jsonModeOpener(true, user_file);
+    if(!user_file.open(QIODevice::ReadOnly)) qDebug() << "Can't open file";
 
-    user_file.write(byteArray);
+    QJsonDocument jsonOrg =     QJsonDocument::fromJson(user_file.readAll());
     user_file.close();
+
+    QJsonArray arrLog = jsonOrg.array();
+    arrLog.push_back(newBlog);
+    QJsonDocument doc(arrLog);
+
+    if(!user_file.open(QIODevice::ReadWrite)) qDebug() << "Error";
+    qDebug() << user_file.readAll();
+    user_file.write(doc.toJson());
+    //qDebug() << user_file.readAll();
+    user_file.close();
+    this->jsonAdapter(user_file);
+
 }
 
 void json::jsonBlogOpener(bool mode, QJsonObject& data_file, QString username_p){

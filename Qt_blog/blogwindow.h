@@ -16,6 +16,7 @@ class BlogWindow : public QMainWindow
 
 public:
     explicit BlogWindow(QWidget *parent = nullptr);
+    BlogWindow(QWidget *parent, QString& user);
     ~BlogWindow();
 
 private slots:
@@ -29,7 +30,7 @@ private slots:
 
 private:
     Ui::BlogWindow *ui;
-
+    QString actualUser;
     int itemSelected = -1;
 };
 

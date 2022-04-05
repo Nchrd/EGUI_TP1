@@ -27,7 +27,10 @@ QWidget
 	color: #000000;
 
 }
-
+QTextEdit
+{
+    color : #ffffff;
+}
 
 /*-----QLabel-----*/
 QLabel

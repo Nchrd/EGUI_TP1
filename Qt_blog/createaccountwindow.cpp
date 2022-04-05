@@ -27,9 +27,9 @@ void CreateAccountWindow::on_createAccountPushButton_clicked()
     myJson.createBlog(username, blogTitle);
 
     if(canLogin == true){
-        this->close();
-        BlogWindow *blogWindow = new BlogWindow;
+        BlogWindow *blogWindow = new BlogWindow(nullptr, username);
         blogWindow->show();
+        this->close();
     }
 }
 

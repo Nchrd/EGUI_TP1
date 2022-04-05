@@ -3,14 +3,10 @@
 
 LoginWindow::LoginWindow(QWidget *parent): QMainWindow(parent), ui(new Ui::LoginWindow)
 {
-    QPixmap background(":rec/images/background.jpg");
-    background.scaled(this->size(), Qt::IgnoreAspectRatio);
-        QPalette palette;
-        palette.setBrush(QPalette::Base, background);
-        this->setPalette(palette);
     ui->setupUi(this);
     this->swap = 1;
 }
+
 
 LoginWindow::~LoginWindow()
 {
@@ -28,16 +24,16 @@ void LoginWindow::on_loginPushButton_clicked()
     myJson.jsonUserReader(username, password, canLogin);
 
     if(canLogin == true){
-        this->close();
-        BlogWindow *blogWindow = new BlogWindow;
+        BlogWindow *blogWindow = new BlogWindow(nullptr, username);
         blogWindow->show();
+        this->close();
     }
 }
 
 
 void LoginWindow::on_createPushButton_clicked()
 {
-    this->setDisabled(true);
+    this->close();
     CreateAccountWindow *createAccount = new CreateAccountWindow;
     createAccount->show();
 }

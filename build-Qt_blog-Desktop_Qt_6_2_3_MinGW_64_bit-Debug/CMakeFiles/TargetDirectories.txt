@@ -1,5 +1,0 @@
-C:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/build-Qt_blog-Desktop_Qt_6_2_3_MinGW_64_bit-Debug/CMakeFiles/Qt_blog.dir
-C:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/build-Qt_blog-Desktop_Qt_6_2_3_MinGW_64_bit-Debug/CMakeFiles/edit_cache.dir
-C:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/build-Qt_blog-Desktop_Qt_6_2_3_MinGW_64_bit-Debug/CMakeFiles/rebuild_cache.dir
-C:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/build-Qt_blog-Desktop_Qt_6_2_3_MinGW_64_bit-Debug/CMakeFiles/Qt_blog_autogen_timestamp_deps.dir
-C:/Users/ender/OneDrive/Documents/GitHub/EGUI_TP1/build-Qt_blog-Desktop_Qt_6_2_3_MinGW_64_bit-Debug/CMakeFiles/Qt_blog_autogen.dir

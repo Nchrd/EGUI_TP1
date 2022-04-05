@@ -4,7 +4,12 @@
 BlogWindow::BlogWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::BlogWindow)
 {
     ui->setupUi(this);
-    ui->usernameLabel->setText("");
+}
+
+BlogWindow::BlogWindow(QWidget *parent, QString& user) : QMainWindow(parent), ui(new Ui::BlogWindow){
+    ui->setupUi(this);
+    actualUser = user;
+    ui->usernameLabel->setText(user);
 }
 
 BlogWindow::~BlogWindow()
@@ -35,7 +40,7 @@ void BlogWindow::on_postPushButton_clicked()
     if(post == "") return;
 
     json myJson;
-    myJson.jsonBlogWriter(title, post, "test", date);
+    myJson.jsonBlogWriter(title, post, actualUser, date);
 
     title.append("  - posted on ");
     title.append(formattedTime);
@@ -62,4 +67,3 @@ void BlogWindow::on_blogListWidget_currentRowChanged(int currentRow)
 {
     itemSelected = currentRow;
 }
-
