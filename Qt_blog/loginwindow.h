@@ -37,10 +37,19 @@ public:
     ~LoginWindow();
 
 private slots:
+    /**
+     * @brief on_loginPushButton_clicked calls functions to login into the user's blog
+     */
     void on_loginPushButton_clicked();
 
+    /**
+     * @brief on_createPushButton_clicked calls functions to open the window that allow the user to create a new account and blog
+     */
     void on_createPushButton_clicked();
 
+    /**
+     * @brief on_passwordPushButton_clicked allows the user to either show or hide his password when typing it
+     */
     void on_passwordPushButton_clicked();
 
 private:

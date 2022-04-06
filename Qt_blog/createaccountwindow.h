@@ -33,9 +33,10 @@ public:
     explicit CreateAccountWindow(QWidget *parent = nullptr);
     ~CreateAccountWindow();
 
-    void writeJson(QString username_m, QString password_p, QString mail_p);
-
 private slots:
+    /**
+     * @brief on_createAccountPushButton_clicked calls the function necessary to create a new account and login the new blog
+     */
     void on_createAccountPushButton_clicked();
 
 private:
