@@ -20,10 +20,11 @@ BlogWindow::~BlogWindow()
 
 void BlogWindow::on_deletePostPushButton_clicked()
 {
-    if(itemSelected != 1){
+    if(itemSelected != -1){
         QListWidgetItem *it = ui->blogListWidget->takeItem(itemSelected);
         delete it;
 
+        this->deletePost(this->actualUser, itemSelected);
         ui->blogListWidget->setCurrentRow(-1);
     }
 }
@@ -102,3 +103,51 @@ void BlogWindow::blogLoader(QString user){
         ui->blogListWidget->addItem(item);
     }
 }
+
+void BlogWindow::deletePost(QString user, int row){
+    QFile blogFile("blog.json");
+    if(!blogFile.open(QIODevice::ReadOnly)) qDebug() << "Can't load blog data";
+
+    QJsonDocument blogData = QJsonDocument::fromJson(blogFile.readAll());
+    blogFile.close();
+
+    QJsonObject blogObject = blogData.object();
+    QJsonObject postData = blogObject[user].toObject();
+    QJsonArray postArray = postData["posts"].toArray();
+
+    QJsonObject postContent = postArray[row-1].toObject();
+    QStringList key = postContent.keys();
+    QJsonObject id = postContent[key[0]].toObject();
+
+    QString title = id["title"].toString().toLower();
+    title.replace(" ", "");
+
+    postContent.remove(title);
+    postArray[row-1] = postContent;
+    postData["posts"] = postArray;
+    blogObject[user] = postData;
+
+    QJsonDocument doc(blogObject);
+
+    if(!blogFile.open(QIODevice::WriteOnly)) qDebug() << "Error";
+    blogFile.write(doc.toJson());
+    blogFile.close();
+
+    if(blogFile.open(QIODevice::ReadOnly)) qDebug() << "Can adapt file read";
+    QByteArray test = blogFile.readAll();
+    QString text = test;
+    blogFile.close();
+    text.replace("{\n   },\n", "\n");
+    qDebug() << text;
+    if(blogFile.open(QIODevice::WriteOnly)) qDebug() << "Can adapt file write";
+    blogFile.write(text.toUtf8());
+    blogFile.close();
+}
+
+void BlogWindow::on_blogListWidget_itemDoubleClicked(QListWidgetItem *item)
+{
+    QMessageBox *postMsg = new QMessageBox();
+    postMsg->setText(item->text());
+    postMsg->show();
+}
+

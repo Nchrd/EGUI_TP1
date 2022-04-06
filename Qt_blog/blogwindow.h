@@ -3,6 +3,8 @@
 
 #include <QMainWindow>
 #include <QTextOption>
+#include <QListWidget>
+#include <QListWidgetItem>
 
 #include "json.h"
 
@@ -20,6 +22,7 @@ public:
     ~BlogWindow();
 
     void blogLoader(QString user);
+    void deletePost(QString user, int row);
 
 private slots:
     void on_deletePostPushButton_clicked();
@@ -29,6 +32,8 @@ private slots:
     void on_disconnectPushButton_clicked();
 
     void on_blogListWidget_currentRowChanged(int currentRow);
+
+    void on_blogListWidget_itemDoubleClicked(QListWidgetItem *item);
 
 private:
     Ui::BlogWindow *ui;

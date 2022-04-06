@@ -145,7 +145,6 @@ void json::jsonAdapter(QFile& file){
     text.replace("[", "");
     text.replace("]", "");
     text.replace("}\n\n\n    {", ",\n");
-    qDebug() << text;
     if(file.open(QIODevice::WriteOnly)) qDebug() << "Can adapt file write";
     file.write(text.toUtf8());
     file.close();
@@ -199,10 +198,8 @@ void json::jsonBlogWriter(QString title, QString post, QString user, QDateTime d
     //qDebug() << doc;
 
 
-    if(!users.open(QIODevice::WriteOnly)) qDebug() << "Error";
-    qDebug() << users.readAll();
+    if(!users.open(QIODevice::WriteOnly)) qDebug() << "Error";;
     users.write(doc.toJson());
-    qDebug() << users.readAll();
     users.close();
 
 }
